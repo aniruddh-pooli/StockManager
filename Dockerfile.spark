@@ -1,0 +1,7 @@
+FROM apache/spark:3.5.5
+USER root
+RUN pip install --no-cache-dir 'numpy>=1.26,<3'
+COPY risk_engine /opt/risk_engine
+ENV PYTHONPATH=/opt
+USER root
+
